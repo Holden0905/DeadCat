@@ -60,14 +60,14 @@ body {
   
   /* Motivational Poster Styles */
   .motivational-poster {
-    background-color: #000;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 8px #000, 0 0 0 10px #333;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
+    border: 2px solid #fff;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
+    background-color: #000;
+    width: 100%; /* Add this */
+    box-sizing: border-box; /* Add this */
   }
   
   .poster-date {
@@ -83,20 +83,21 @@ body {
   }
   
   .poster-image-container {
-    border: 3px solid #fff;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 300px;
     overflow: hidden;
-    position: relative;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
   }
   
   .poster-image {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-width: 100%;
+    display: block;
   }
   
   .poster-title {
@@ -107,6 +108,8 @@ body {
     color: #fff;
     letter-spacing: 0.2em;
     font-weight: bold;
+    text-align: center; /* Add this to ensure all titles are centered */
+    width: 100%; /* Ensure full width */
   }
   
   .poster-quote {
@@ -116,6 +119,10 @@ body {
     line-height: 1.4;
     margin: 0.5rem 0 1.5rem;
     color: #ccc;
+    height: 80px; /* Add a fixed height */
+    overflow: hidden; /* Handle overflow */
+    text-align: center; /* Add this to ensure all titles are centered */
+    width: 100%; /* Ensure full width */
   }
   
   /* Footer Styles */
@@ -179,4 +186,10 @@ body {
   
   .negative {
     color: #ff0000;
+  }
+
+  @media (min-width: 1024px) {
+    .poster-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
