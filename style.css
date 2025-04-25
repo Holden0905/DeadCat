@@ -1,0 +1,181 @@
+/* Base Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+  }
+  
+  header h1 {
+    font-family: Cinzel, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  /* Poster Grid Layout */
+  .poster-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Grid */
+  @media (min-width: 768px) {
+    .poster-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .poster-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Motivational Poster Styles */
+  .motivational-poster {
+    background-color: #000;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 8px #000, 0 0 0 10px #333;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .poster-date {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-family: Cinzel, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  .poster-image-container {
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+  }
+  
+  .poster-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .poster-title {
+    font-family: Cinzel, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+  }
+  
+  .poster-quote {
+    font-family: Cinzel, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1.5rem;
+    color: #ccc;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    background-color: #000;
+    border-top: 2px solid #fff;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #fff;
+    font-family: Cinzel, Helvetica, sans-serif;
+  }
+
+  /* Market Data Ticker Styles */
+.market-data {
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+    padding: 1rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .ticker {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .ticker-item {
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  
+  .ticker-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .ticker-price {
+    font-family: 'Courier New', monospace;
+  }
+  
+  .ticker-change {
+    font-family: 'Courier New', monospace;
+    margin-left: 0.5rem;
+  }
+  
+  .positive {
+    color: #00ff00;
+  }
+  
+  .negative {
+    color: #ff0000;
+  }
